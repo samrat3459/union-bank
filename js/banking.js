@@ -1,78 +1,3 @@
-// // =========== handle deposit button event ===============
-
-// document.getElementById('deposit-button').addEventListener('click', function(){
-
-//     // ========== deposit input and update ===============
-
-//     const depositInput = document.getElementById('deposit-input');
-//     const newdepositAmountText = depositInput.value;
-//     const newdepositAmount = parseFloat(newdepositAmountText);
-
-
-
-//     // ========== setdeposit total =============
-//     const depositTotal = document.getElementById('deposit-total');
-//     const previousDepositText = depositTotal.innerText;
-//     const previousDepositAmount = parseFloat(previousDepositText);
-//     const newdepositTotal = previousDepositAmount + newdepositAmount;
-//     depositTotal.innerText = newdepositTotal;
-
-
-//     // ========== update account balance =================
-
-//     const balanceTotal = document.getElementById('balance-total');
-//     const balanceTotalText = balanceTotal.innerText;
-//     const previousBalanceTotal = parseFloat(balanceTotalText);
-//     const newBalanceTotal = previousBalanceTotal + newdepositAmount;
-//     balanceTotal.innerText = newBalanceTotal;
-
-
-//     // ====== clear deposit input field =========
-//     depositInput.value = '';
-// })
-
-
-
-
-// // ============== handle widthdraw event handler ===================
-
-// document.getElementById('withdraw-button').addEventListener('click', function(){
-//     const withdrawInput = document.getElementById('withdraw-input');
-//     const withdrawAmountText = withdrawInput.value;
-//     const newWithdrawAmount = parseFloat(withdrawAmountText);
-
-
-//     // =============== set widthdrawTotal ====================
-
-//     const withdrawTotal = document.getElementById('withdraw-total');
-//     const previousWithdrawText = withdrawTotal.innerText;
-//     const previousWithdrawTotal = parseFloat(previousWithdrawText);
-//     const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-//     withdrawTotal.innerText = newWithdrawTotal;
-
-//     // ========== update balance after withdraw amount =================
-
-//     const balanceTotal = document.getElementById('balance-total');
-//     const previousBalanceText = balanceTotal.innerText;
-//     const previousBalanceTotal = parseFloat(previousBalanceText);
-//     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
-//     balanceTotal.innerText = newBalanceTotal;
-
-//     // ======== clear widthdraw input field ===========
-//     withdrawInput.value = '';
-// })
-
-
-
-
-
-
-// ===================================================================================
-// ====================  functionally handle code and organize code ==================
-// ==================== ===================== =================== ====================
-
-
-
 // ============ input amount ================
 
 function getInputValue(inputId) {
@@ -111,8 +36,7 @@ function getCurrentBalance(){
 
 function updateBalance(newdepositAmount, isAdd) {
     const balanceTotal = document.getElementById('balance-total');
-   /* const balanceTotalText = balanceTotal.innerText;
-    const previousBalanceTotal = parseFloat(balanceTotalText); */
+   
 
     const previousBalanceTotal = getCurrentBalance()
 
@@ -125,10 +49,6 @@ function updateBalance(newdepositAmount, isAdd) {
         balanceTotal.innerText = newBalanceTotal;
     }
 }
-
-
-
-
 
 
 // =========== handle deposit button event ===============
@@ -148,7 +68,6 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 
 
 })
-
 
 
 // ============== handle widthdraw event handler ===================
